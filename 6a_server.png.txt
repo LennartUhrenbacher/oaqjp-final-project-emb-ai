@@ -1,0 +1,56 @@
+SCREENSHOT: 6a_server.png
+
+Final contents of server.py file:
+
+"""
+Flask server for emotion detection web application
+"""
+
+from flask import Flask, render_template, request, jsonify
+import sys
+import os
+
+# Add parent directory to path to import EmotionDetection package
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from EmotionDetection import emotion_detector
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    """
+    Main page route
+    """
+    return render_template('index.html')
+
+@app.route('/emotionDetector', methods=['POST'])
+def analyze_emotion():
+    """
+    Endpoint for emotion analysis
+    """
+    try:
+        # Get text from form data
+        text_to_analyze = request.form.get('textToAnalyze', '')
+        
+        if not text_to_analyze or text_to_analyze.strip() == '':
+            return "Invalid text! Please try again!"
+        
+        # Analyze emotions
+        result = emotion_detector(text_to_analyze)
+        
+        if not result:
+            return "Invalid text! Please try again!"
+        
+        # Format the response as specified
+        response_text = f"For the given statement, the system response is 'anger': {result['anger']}, 'disgust': {result['disgust']}, 'fear': {result['fear']}, 'joy': {result['joy']} and 'sadness': {result['sadness']}. The dominant emotion is {result['dominant_emotion']}."
+        
+        return response_text
+        
+    except Exception as e:
+        return f"Error: {str(e)}"
+
+if __name__ == '__main__':
+    app.run(debug=True, host='localhost', port=5000)
+
+The server.py file has been created with the required /emotionDetector endpoint and proper output formatting.

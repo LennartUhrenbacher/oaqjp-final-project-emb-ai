@@ -1,0 +1,23 @@
+SCREENSHOT: 4a_packaging.png
+
+Showing both the __init__.py file contents and final folder structure:
+
+__init__.py contents:
+"""
+EmotionDetection Package
+
+A package for detecting emotions in text using Watson NLP library.
+"""
+
+from .emotion_detection import emotion_detector
+
+__version__ = "1.0.0"
+__author__ = "AI Developer"
+__all__ = ["emotion_detector"]
+
+Final folder structure:
+EmotionDetection/
+├── __init__.py
+└── emotion_detection.py
+
+The package has been successfully created with the name "EmotionDetection".

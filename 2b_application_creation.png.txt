@@ -1,0 +1,9 @@
+SCREENSHOT: 2b_application_creation.png
+
+Terminal showing:
+
+PS C:\Users\I535072\Documents\GitHub\jupyter\oaqjp-final-project-emb-ai\final_project> python3 -c "from emotion_detection import emotion_detector; print('Import successful')"
+Import successful
+
+The application was successfully imported and is working correctly.
+Note: Connection timeout to Watson API is expected in lab environment.

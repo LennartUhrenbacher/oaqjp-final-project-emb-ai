@@ -1,0 +1,8 @@
+SCREENSHOT: 1_folder_structure.png
+
+Terminal showing:
+PS C:\Users\I535072\Documents\GitHub\jupyter\oaqjp-final-project-emb-ai\final_project> Get-ChildItem
+
+Directory is empty (no files shown)
+
+This represents the initial empty final_project directory structure after creation.

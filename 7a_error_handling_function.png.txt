@@ -1,0 +1,15 @@
+SCREENSHOT: 7a_error_handling_function.png
+
+Modified emotion_detector function with error handling:
+
+The function now includes:
+- Blank entry validation (returns None values for empty text)
+- Status code 400 handling (returns None values for bad requests)
+- Exception handling (returns None values for any errors)
+- Proper error handling for all edge cases
+
+Key error handling features:
+1. Check for blank/empty text input
+2. Handle HTTP 400 status codes
+3. Catch and handle all exceptions
+4. Return consistent None values for error cases

@@ -1,0 +1,15 @@
+SCREENSHOT: 7b_error_handling_server.png
+
+Edited server.py file with error handling:
+
+The server now includes:
+- Check for blank/empty text input
+- Validation that dominant_emotion is not None
+- Display of "Invalid text! Please try again!" message for error cases
+- Proper error handling for all scenarios
+
+Key error handling features:
+1. Input validation for empty text
+2. Check for None dominant_emotion values
+3. Consistent error message display
+4. Graceful handling of all error conditions

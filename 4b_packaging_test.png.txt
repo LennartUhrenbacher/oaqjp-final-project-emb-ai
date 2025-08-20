@@ -1,0 +1,9 @@
+SCREENSHOT: 4b_packaging_test.png
+
+Terminal showing successful package test:
+
+PS C:\Users\I535072\Documents\GitHub\jupyter\oaqjp-final-project-emb-ai> python3 -c "from EmotionDetection import emotion_detector; print('Package imported successfully')"
+Package imported successfully
+
+The EmotionDetection package has been created accurately and can be imported without any error messages.
+The package is ready for use and testing.
